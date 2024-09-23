@@ -5,7 +5,10 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Card from 'react-bootstrap/Card';
 
+import { Link } from 'react-router-dom'; // Import Link for navigation
+
 const HomePage = () => {
+
   const [books, setBooks] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [bookData, setBookData] = useState({ title: '', author: '', genre: '', description: '', image: null });
@@ -227,28 +230,40 @@ const HomePage = () => {
       </div>
 
       {/* Book Cards */}
+    
       <div className="d-flex flex-row flex-wrap">
-        {books.map((book) => (
-          <Card style={{ width: '18rem', margin: '10px' }} key={book._id}>
-            <Card.Img
-              variant="top"
-              src={book.imageUrl ? `https://bookxbckend.onrender.com${book.imageUrl}` : "holder.js/100px180"}
-              alt={book.title}
-              className="w-100"
-              style={{ height: '200px', objectFit: 'cover' }}
-            />
-            <Card.Body>
-              <Card.Title>{book.title}</Card.Title>
-              <Card.Text>Author: {book.author}</Card.Text>
-              <Card.Text>Genre: {book.genre}</Card.Text>
-              <Card.Text>Desc: {book.description}</Card.Text>
-              <button onClick={() => handleEditBook(book)} className="btn btn-secondary me-2">Edit</button>
-              <button onClick={() => handleDeleteBook(book._id)} className="btn btn-danger">Delete</button>
-            </Card.Body>
-          </Card>
-        ))}
-      </div>
-
+  {books.map((book) => (
+    <Card style={{ width: '18rem', margin: '10px' }} key={book._id}>
+      <Link to={`/book/${book._id}`}>
+        <Card.Img 
+          variant="top" 
+          src={book.imageUrl ? `https://bookxbe-3.onrender.com${book.imageUrl}` : "holder.js/100px180"} 
+          alt={book.title} 
+          className="w-100" 
+          style={{ height: '200px', objectFit: 'cover' }} 
+        />
+      </Link>
+      <Card.Body>
+        <Card.Title>{book.title}</Card.Title>
+        <Card.Text>
+          Author: {book.author}
+        </Card.Text>
+        <Card.Text>
+          Genre: {book.genre}
+        </Card.Text>
+        <Card.Text>
+          Desc: {book.description}
+        </Card.Text>
+        <button onClick={() => handleEditBook(book)} className="btn btn-secondary me-2">
+          Edit
+        </button>
+        <button onClick={() => handleDeleteBook(book._id)} className="btn btn-danger">
+          Delete
+        </button>
+      </Card.Body>
+    </Card>
+  ))}
+</div>
       <Footer /> {/* Include Footer */}
     </div>
   );

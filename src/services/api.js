@@ -46,3 +46,8 @@ export const deleteBook = (bookId, token) =>
     headers: { Authorization: `Bearer ${token}` },
   });
 
+// Fetch a book by ID
+export const fetchBookById = (bookId, token) =>
+  api.get(`/books/${bookId}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
