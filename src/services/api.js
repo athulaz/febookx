@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Base URL for the API
 const api = axios.create({
-  baseURL: 'https://bookxbe-3.onrender.com', // Change this if your backend runs on a different port
+  baseURL: 'https://bookxbckend.onrender.com/api', // Change this if your backend runs on a different port
 });
 
 // Function to register a new user

@@ -232,7 +232,7 @@ const HomePage = () => {
           <Card style={{ width: '18rem', margin: '10px' }} key={book._id}>
             <Card.Img
               variant="top"
-              src={book.imageUrl ? `https://bookxbe-3.onrender.com${book.imageUrl}` : "holder.js/100px180"}
+              src={book.imageUrl ? `https://bookxbckend.onrender.com${book.imageUrl}` : "holder.js/100px180"}
               alt={book.title}
               className="w-100"
               style={{ height: '200px', objectFit: 'cover' }}
