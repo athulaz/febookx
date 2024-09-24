@@ -237,7 +237,7 @@ const HomePage = () => {
       <Link to={`/book/${book._id}`}>
         <Card.Img 
           variant="top" 
-          src={book.imageUrl ? `https://bookxbckend.onrender.com${book.imageUrl}` : "holder.js/100px180"} 
+          src={book.imageUrl ? `https://backendbookx.onrender.com${book.imageUrl}` : "holder.js/100px180"} 
           alt={book.title} 
           className="w-100" 
           style={{ height: '200px', objectFit: 'cover' }} 

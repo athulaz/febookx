@@ -28,7 +28,7 @@ const BookDetailsPage = () => {
     <div className="container">
       <h1>{book.title}</h1>
       <img 
-        src={book.imageUrl ? `https://bookxbckend.onrender.com${book.imageUrl}` : "placeholder.jpg"} 
+        src={book.imageUrl ? `https://backendbookx.onrender.com${book.imageUrl}` : "placeholder.jpg"} 
         alt={book.title} 
         style={{ width: '300px', height: '400px', objectFit: 'cover' }}
       />
