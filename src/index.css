@@ -4,3 +4,11 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Custom styles to reduce search bar width on smaller screens */
+@media (max-width: 576px) {
+  .search-bar {
+    
+    width: 100%; /* Adjust to a smaller width for mobile devices */
+    max-width: 200px; /* Set the max width to a suitable size */
+  }
+}
