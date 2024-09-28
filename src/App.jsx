@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import LoginRegisterPage from './pages/LoginRegisterPage'; 
 import './bootstrap.min.css'
 import BookDetailsPage from './pages/BookDetailsPage'; // Import the new BookDetailsPage
+import BooksPage from './pages/BookPage';
 const App = () => {
   return (
     <Router>
@@ -18,6 +19,7 @@ const App = () => {
 
         {/* Redirect to login by default if no matching route */}
         <Route path="*" element={<LoginRegisterPage />} />
+        <Route path="/books" element={<BooksPage />} /> {/* New route */}
 
         <Route path="/book/:id" element={<BookDetailsPage />} /> {/* Add this route */}
       </Routes>

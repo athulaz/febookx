@@ -23,8 +23,6 @@ export const fetchBooks = (query = '', token) =>
 //     headers: { Authorization: `Bearer ${token}` },
 //   });
 
-
-
   export const addBook = (bookData, token) =>
     api.post('/books', bookData, {
       headers: {

@@ -27,24 +27,25 @@ const BookDetailsPage = () => {
 
     // Handle go back to homepage
     const handleGoBack = () => {
-      navigate('/home'); // Navigate back to the homepage
+      navigate('/books'); // Navigate back to the homepage
     };
   return (
-    <div className="container">
+    <div className="container p-5">
       <h1>{book.title}</h1>
       <img 
         src={book.imageUrl ? `https://backendbookx.onrender.com${book.imageUrl}` : "placeholder.jpg"} 
         alt={book.title} 
         style={{ width: '300px', height: '400px', objectFit: 'cover' }}
       />
-      
-      <p><strong>Author:</strong> {book.author}</p>
+      <div className="pt-4" >  
+        <p><strong>Author:</strong> {book.author}</p>
       <p><strong>Genre:</strong> {book.genre}</p>
-      <p><strong>Description:</strong> {book.description}</p>
+      <p><strong>Description:</strong> {book.description}</p></div>
+     
       {/* Go Back to Homepage Button */}
       <button 
         onClick={handleGoBack} 
-        className="btn btn-primary mt-3"
+        className=" mt-3 btn btn-dark rounded-0 rounded-2 mt-2 border-0" 
       >
         Back
       </button>

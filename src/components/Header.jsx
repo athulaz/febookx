@@ -14,19 +14,14 @@ const Header = () => {
     
       
     
-        <nav className="bg-dark text-white ">
-         
-
-          
-          <Navbar expand="lg" className="bg-body-tertiary">
-
-          
-  <Navbar.Brand  > <i className="ms-5 fa-solid fa-book-open-reader fa-2xl" style={{ color: "#4c6d85", }} />{' '} BookX</Navbar.Brand>
- 
-  
-
-</Navbar>
-        </nav>
+      
+        
+<Navbar expand="lg" className=" border-0 py-4" style={{ backgroundColor: 'black' }}>
+      <Container>
+      <span><i className="fa-solid fa-book-open-reader fa-3x me-3"></i> <span className='fs-4'>BookX</span></span>
+      </Container>
+    </Navbar>
+      
 
 
 
